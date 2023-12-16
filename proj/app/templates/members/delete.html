@@ -1,0 +1,13 @@
+<html>
+    <head><title>Confirm Delete</title></head>
+<body>
+    <form action="deleterecord/{{ member.id }}" method="post">
+        {% csrf_token %}
+        <h2>Are you sure to delete {{ member.fname }}? </h2>
+        <input type="submit" value="Yes">
+        <a href="{% url 'home' %}">No</a>
+
+    </form>
+    
+</body>
+    </html>
